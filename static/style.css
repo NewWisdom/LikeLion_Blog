@@ -1,0 +1,240 @@
+@import "reset.css";
+/* FONT */
+/* @font-face {
+  font-family: "CookieRunOTF-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&family=Inconsolata:wght@500&display=swap');
+
+.notosanskr * {
+  font-family: 'Inconsolata', monospace;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Inconsolata', monospace;
+  background-color: #C3B8D9;
+}
+
+/* header */
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 10%;
+  background-color: #394D73;
+  color: white;
+}
+
+header h1 {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Fjalla One', sans-serif;
+}
+header h2 {
+  display: inline-block;
+  align-content: flex-end;
+  margin-left: auto;
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Fjalla One', sans-serif;
+}
+header a {
+  all: unset;
+  color: white;
+  cursor: pointer;
+}
+
+header .dslion {
+  margin-left: auto; 
+  width: 50px;
+  margin-right: 1em;
+}
+/* section*/
+section {
+  width: 70%;
+}
+
+/* footer */
+
+footer {
+  background-color: #7883BF;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: auto;
+}
+footer p {
+  font-size: 8pt;
+  color: #ebf0f1;
+}
+
+/* 공통 요소 */
+
+h3 {
+  color: #394D73;
+  font-size: 2rem;
+}
+
+.date {
+  font-size: 9pt;
+  color: gray;
+}
+
+/* home.html */
+.home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid #394D73;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 70%;
+  background-color: white;
+}
+.home p {
+  flex-basis: auto;
+  word-break: break-all;
+  margin: 1em;
+}
+.home a {
+  all: unset;
+  color: #394D73;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.preview {
+  font-size: 9pt;
+  color: gray;
+  margin-bottom: 0px;
+}
+
+/* create.html */
+#id_title,
+#id_body {
+  background: none;
+  appearance: none;
+  border: 0;
+  color: black;
+  border-bottom: 1px solid black;
+  margin-top: 1em;
+}
+
+#id_title {
+  font-size: 20px;
+  align-items: center;
+  font-family: 'Inconsolata', monospace;
+}
+
+#id_body {
+  font-size: 15px;
+  align-items: center;
+  font-family: 'Inconsolata', monospace;
+}
+
+/* detail.html */
+
+.detail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+
+}
+#content{
+  background-color: white;
+  border: 3px solid #394D73;
+}
+.comments{
+  background-color: white;
+  border: 3px solid #394D73;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.btn a {
+  all: unset;
+  color: gray;
+  margin: 1rem;
+  cursor: pointer;
+  font-weight: bolder;
+}
+.btn a:hover {
+  color: #7883BF;
+}
+
+.detail p {
+  margin: 1em;
+  word-break: break-all;
+}
+hr{
+  color: #7883BF;
+}
+
+
+/* create.html update.html */
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  background-color: white;
+  color: #7883BF;
+  border: 1px solid #7883BF;
+  border-radius: 5px;
+  font-size: 12pt;
+}
+
+input:hover {
+  background-color: #7883BF;
+  color: white;
+  border: 1px solid #7883BF;
+}
+#edit{
+  color: #D99559;
+  font-size: 12pt;
+}
+#delete{
+  color: #BF5A5A;
+  font-size: 12pt;
+}
+
+.naver {
+  color: #394D73;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.naver_h2 {
+
+  align-items: center;
+
+} 
+#map {
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+}

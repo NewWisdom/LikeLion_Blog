@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+<div class="detail" id="content">
+  <h3>{{blog.title}}</h3>
+  <p>{{blog.body}}</p>
+  <p class="date">{{blog.date | date:"Y년 n월 j일 G시 i분"}}</p>
+  <div class="btn">
+    <a id="edit" href="{% url 'update' blog.pk %}">수정</a>
+    <a id="delete" href="{% url 'delete' blog.pk %}">삭제</a>
+  </div>
+</div>
+
+<hr/>
+<h3>Comments</h3>
+<div class="comments">
+{% for comment in blog.comments.all %}
+<div class="detail">
+  <strong>{{comment.body}}</strong>
+  <p class="date">{{comment.date | date:"Y년 n월 j일 G시 i분"}}</p>
+  <div class="btn">
+    <a href="{% url 'comment_update' comment.pk %}">수정</a>
+    <a href="{% url 'comment_delete' comment.pk %}">삭제</a>
+  </div>
+</div>
+{% empty %}
+<p>댓글이 없습니다</p>
+{% endfor %}
+</div>
+{%if request.user.is_authenticated%}
+<form action="" method="POST">
+  {% csrf_token %} {{comment_form.as_p}}
+  <input type="submit" value="등록"/>
+  </form>
+<br />
+{%endif%}
+{% endblock %}
